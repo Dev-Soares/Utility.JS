@@ -25,5 +25,6 @@ export function criaBotoes(item){
     btnDelete.innerHTML = 'X';
     item.appendChild(btnCheck);
     item.appendChild(btnDelete);
+    return btnDelete, btnCheck;
 }
 
