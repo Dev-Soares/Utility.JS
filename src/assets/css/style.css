@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 :root {
   --primary-color: rgb(17, 86, 102);
@@ -13,7 +16,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background-image: url(../img/parabolic-rectangle.png);
+  background-position: 0;
+  background-size: 100%;
   font-family: 'Open sans', sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
@@ -47,7 +52,7 @@ body {
 
 .btn-tarefa{
   border: none;
-  background: rgb(64, 154, 76);
+  background: rgb(40, 130, 52);
   color: rgb(255, 255, 255);
   font-size: 18px;
   font-weight: 700;
@@ -57,7 +62,7 @@ body {
 }
 
 .btn-tarefa:hover {
-  background: rgb(40, 130, 52);
+  background: rgb(30, 98, 39);
 }
 
 .titulo-lista {
@@ -67,38 +72,41 @@ body {
 
 .div-lista {
   margin-bottom: 50px;
-  
 }
+
 .lista-tarefas li {
-  font-family: 'Open sans', sans-serif;
-  font-size: 40px;
-  text-decoration: solid;
+  font-size: 25px;
   color: #ffffff;
   padding: 20px;
   align-items: baseline;
   max-width: 560px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .checked-button, .delete-button {
-  height: 30px;
-  margin: 15px;
+  height: 40px;
+  margin-left: 10px;
   color: #ffffff;
-  font-family: 'Open sans', sans-serif;
   border: none;
-  font-size: 15px;
-  text-align: center;
-  width: 30px;
+  width: 40px;
   cursor: pointer;
+  font-size: 20px;
+  font-family: 'Roboto';
+  border-radius: 100%;
+  
 }
 
 .checked-button {
   background-color: rgb(75, 188, 90);
+  margin-left: 20px;
 }
 
 .delete-button{
   background-color: rgb(197, 48, 48);
+  
 }
+
 .checado {
   color:  rgb(75, 188, 90)!important;
-  text-decoration: dashed;
+  text-decoration: line-through!important;
 } 
