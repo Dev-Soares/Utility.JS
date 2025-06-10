@@ -88,6 +88,7 @@ body {
   font-size: 15px;
   text-align: center;
   width: 30px;
+  cursor: pointer;
 }
 
 .checked-button {
@@ -98,6 +99,5 @@ body {
   background-color: rgb(197, 48, 48);
 }
 .checado {
-  text-decoration: dashed;
-  color: rgb(75, 188, 90);
+  font-size: 500px;
 }

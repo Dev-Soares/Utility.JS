@@ -1,5 +1,5 @@
 import { Tarefa } from './classTarefa';
-import { createElement } from 'react';  
+import { createElement, appendChild } from 'react';  
 
 export function criaItem(){
     const nomeTarefa = document.querySelector('.tarefa').value;
