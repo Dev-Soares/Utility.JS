@@ -99,5 +99,6 @@ body {
   background-color: rgb(197, 48, 48);
 }
 .checado {
-  font-size: 500px;
-}
+  color:  rgb(75, 188, 90)!important;
+  text-decoration: dashed;
+} 
