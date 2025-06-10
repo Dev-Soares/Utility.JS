@@ -1,0 +1,29 @@
+import { Tarefa } from './classTarefa';
+import { createElement } from 'react';  
+
+export function criaItem(){
+    const nomeTarefa = document.querySelector('.tarefa').value;
+    if(nomeTarefa === ''){
+        window.alert('Digite algo válido, por favor')
+        return
+    }
+    const listaTarefa = document.querySelector('.lista-tarefas');
+    const item = document.createElement('li')
+    listaTarefa.appendChild(item)
+    const tarefa = new Tarefa(nomeTarefa, false);
+    item.innerHTML = tarefa.nome;
+    document.querySelector('.tarefa').value = ''
+    return item; 
+}
+
+export function criaBotoes(item){
+    const btnCheck = document.createElement('button');
+    btnCheck.classList.add('checked-button');
+    btnCheck.innerHTML = 'OK';
+    const btnDelete = document.createElement('button');
+    btnDelete.classList.add('delete-button');
+    btnDelete.innerHTML = 'X';
+    item.appendChild(btnCheck);
+    item.appendChild(btnDelete);
+}
+
