@@ -1,5 +1,8 @@
 import { Tarefa } from './classTarefa';
-import { createElement, appendChild } from 'react';  
+import { createElement, appendChild } from 'react';
+import { interatividadeBotoes } from './IntBotoes'
+
+
 
 export function criaItem(){
     const nomeTarefa = document.querySelector('.tarefa').value;
@@ -25,6 +28,6 @@ export function criaBotoes(item){
     btnDelete.innerHTML = 'X';
     item.appendChild(btnCheck);
     item.appendChild(btnDelete);
-    return btnDelete, btnCheck;
+    interatividadeBotoes(); 
 }
 
