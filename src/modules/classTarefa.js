@@ -1,6 +1,5 @@
 export class Tarefa {
-    constructor(nome, status){
+    constructor(nome){
         this.nome = nome;
-        this.status = status;
     }
 }

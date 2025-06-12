@@ -18,4 +18,17 @@ document.querySelector('.tarefa').addEventListener('keypress', (event) => {
     };
 });
 
+const lista = document.querySelector(".lista-tarefas");
+
+lista.addEventListener("click", (event) => {
+  if (event.target.classList.contains("delete-button")) {
+    const item = event.target.closest("li");
+    item.remove();
+  }
+
+  if (event.target.classList.contains("checked-button")) {
+    const item = event.target.closest("li")
+    item.classList.add('checado');
+  }
+});
 
