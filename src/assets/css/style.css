@@ -4,8 +4,11 @@
 
 
 :root {
-  --primary-color: rgb(17, 86, 102);
-  --primary-color-darker: rgb(9, 48, 56);
+  --primary-color: rgb(30, 57, 30);
+  --primary-color-darker: rgb(8, 12, 6);
+  --container-color: #222121;
+  --white-color: #ffffff;
+  --light-gray-color: #c0c0c0;
 }
 
 * {
@@ -16,7 +19,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(../img/parabolic-rectangle.png);
+  background-color: var(--primary-color);
   background-position-x: center;
   background-position-y: center;
   background-position: static;
@@ -29,10 +32,10 @@ body {
 .container {
   max-width: 640px;
   margin: 50px auto;
-  background: #222121;
+  background: var(--container-color);
   padding: 30px;
   border-radius: 10px;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .envio-tarefa * {
@@ -55,7 +58,7 @@ body {
 .btn-tarefa{
   border: none;
   background: rgb(40, 130, 52);
-  color: rgb(255, 255, 255);
+  color: var(--white-color);
   font-size: 18px;
   font-weight: 700;
   height: 40px;
@@ -88,7 +91,7 @@ body {
 .checked-button, .delete-button {
   height: 40px;
   margin-left: 10px;
-  color: #ffffff;
+  color: var(--white-color);
   border: none;
   width: 40px;
   cursor: pointer;
@@ -112,3 +115,64 @@ body {
   color:  rgb(75, 188, 90)!important;
   text-decoration: line-through!important;
 } 
+
+/* CSS Landing Page */
+
+.menu{
+    position: fixed; /*perde o status de bloco e fixa ele no topo*/
+    top: 0; /*pra ele nao descer caso outro elemento seja mexido?*/
+    left: 0;
+    right: 0;
+    width: 100%;
+    align-items: center;
+    z-index: 1; /*faz com que o menu nao seja ultrapassado por outros elementos*/
+    height: 60px;
+    border-bottom: 0.1rem solid var(--light-gray-color);
+    justify-content: center;
+    background-color: var(--white-color);
+}
+.menu-content{
+    display: flex; /*solta parte do menu*/
+    justify-content: space-between; /*coloca um espaco entre os conteudos*/
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 60px;
+    align-items: center;
+}
+.menu ul{
+    list-style: none; /*tira as bolinhas da ul*/
+    display: flex; /*solta*/                                   
+}
+.menu ul li a{
+    display: block; /*bota o txt lado a lado*/
+    padding: 2rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    position: relative;
+    text-decoration: none;
+}
+.menu h1{
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    padding: 2rem;
+}
+.menu h1 a {
+    color: inherit; /*faz com que o elemento herde a cor de seu "pai"*/
+}
+
+/*inicio*/
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 0;
+    height: 0.1rem;
+    background: var(--primary-color);
+    transition: all 400ms ease-in-out;
+}
+.menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;
+}
+/*tudo daqui pra cima foi pra botar efeitinho no menu*/
