@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
 :root {
-  --primary-color: rgb(30, 57, 30);
+  --primary-color: rgb(19, 41, 19);
   --primary-color-darker: rgb(8, 12, 6);
-  --container-color: #222121;
+  --container-color: #0b0b0b;
   --white-color: #ffffff;
   --light-gray-color: #c0c0c0;
+  --light-green-color: rgb(41, 188, 41);
+  --title-fonts: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  --text-fonts: url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 }
 
 * {
@@ -169,10 +173,133 @@ body {
     width: 0;
     height: 0.1rem;
     background: var(--primary-color);
-    transition: all 400ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 .menu ul li a:hover::after{
     width: 50%;
     left: 25%;
 }
 /*tudo daqui pra cima foi pra botar efeitinho no menu*/
+
+#apresentacao-inicial{
+  height: 1000px;
+  background: url(../img/bg1.png);
+  background-position: static;
+  background-size: cover;
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+.txt-apresentacao{
+  margin: 100px 40px 40px 40px;
+}
+  
+
+.txt-tasklist, .txt-gastos {
+  padding-top: 200px;
+  padding-left: 60px;
+  padding-left: 60px;
+}
+
+#tasklist-page, #gastos-page{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.txt-tasklist, .txt-gastos {
+  flex:1;
+}
+.tasklist-img{
+  flex: 0;
+}
+.txt-apresentacao h2 {
+  color: var(--white-color);
+  font-size: 100px;
+  margin-left: 90px;
+  font-family: var(--title-fonts);
+  margin-bottom: 30px;
+  line-height: normal;
+  
+
+}
+
+ #tasklist-page h2, #gastos-page h2{
+  color: var(--white-color);
+  font-size: 60px;
+  padding-left: 90px;
+  font-family: var(--title-fonts);
+  padding-bottom: 30px;
+  line-height: normal;
+  
+  
+}
+
+.txt-apresentacao, .txt-tasklist p , .txt-gastos p{
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 30px;
+  letter-spacing: 0.2px;
+  line-height: 50px;
+  color: var(--white-color);
+  font-family: var(--text-fonts);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.txt-tasklist aside img, .txt-gastos aside img{
+  display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+#tasklist-page {
+  height: 1000px;
+  background-color: black;
+  color: var(--white-color);
+} 
+
+#tasklist-page button, #gastos-page button {
+   border: none;
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-size: 40px;
+  font-weight: 700;
+  height: 80px;
+  cursor: pointer;
+  margin-top: 80px;
+  border-radius: 20%;
+  width: 200px;
+  margin: 30px;
+  align-content: center;
+  display: block;
+  margin-left: 100px;
+}
+
+#tasklist-page #gastos-page , a{
+  text-decoration: none;
+  color: var(--white-color);
+  font-family: var(--title-fonts);
+  
+  
+}
+
+#gastos-page {
+  height: 1000px;
+  background: url(../img/bg2.png);
+  background-position: static;
+  background-size: cover;
+}
+
+#gastos-page button {
+  background-color: black !important;
+}
+
+
+
