@@ -335,6 +335,7 @@ body {
   margin-left: 100px;
   box-shadow: 0 4px 15px rgb(20, 67, 26);
   transition: box-shadow 0.3 ease, transform 0.3 ease;
+  
 }
 
 #tasklist-page button:hover, #gastos-page button:hover {
