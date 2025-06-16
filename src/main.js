@@ -3,9 +3,6 @@ import './assets/css/style.css';
 import { criaBotoes, criaItem } from './modules/createEl';
 
 
-//teste 
-//teste
-//teste
 const btnTarefa = document.querySelector('.btn-tarefa');
 
 btnTarefa.addEventListener('click', (e) => {
