@@ -43,7 +43,7 @@ body {
 }
 
 .lista-section {
-  background-image: url(../img/bg2.png);
+  background-image: url(../css/img/bg2.png);
   height: 1000px;
   background-position: static;
   background-size: cover;
@@ -229,7 +229,7 @@ body {
 
 #apresentacao-inicial {
   height: 800px;
-  background: url(../img/bg1.png);
+  background: url(../css/img/bg1.png);
   background-position: static;
   background-size: cover;
 
@@ -354,7 +354,7 @@ body {
 
 #gastos-page {
   height: 1000px;
-  background: url(../img/bg2.png);
+  background: url(../css/img/bg2.png);
   background-position: static;
   background-size: cover;
 }
