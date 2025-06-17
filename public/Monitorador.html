@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Monitorador de Gastos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Monitorador de Gastos</title>
 </head>
+
 <body>
-     <aside class="menu">
+  <aside class="menu">
     <div class="menu-content">
       <h1>Nome do site</h1>
       <nav>
@@ -19,7 +21,32 @@
       </nav>
     </div>
   </aside>
-  <section></section>
+  <section class="lista-section">
+    <div class="container">
+      <div>
+        <h1>Monitorador de Gastos</h1>
+        <p>Para poder monitorar da forma correta, Insira abaixo a Descrição do gasto, a data e o valor </p>
+        <label for="desc-gasto">Descrição:</label>
+        <input type="text" class="desc-gasto"><br>
+        <label for="data-gasto">Data:</label>
+        <input type="text" class="data-gasto"><br>
+        <label for="valor-gasto">Valor:</label>
+        <input type="text" class="valor-gasto"><br>
+        <button class="btn-envio" id="btn-gastos">Enviar</button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Tabela de Gastos</h1>
+      <table class="tabela-final">
+        <tr>
+          <th>Descrição</th>
+          <th>Data</th>
+          <th>Valor</th>
+        </tr>
+      </table>
+    </div>
+
+  </section>
   <footer class="footer-page">
     <div class="footer-content">
       <nav>
@@ -38,4 +65,6 @@
     </div>
   </footer>
 </body>
+<script src="./assets/js/bundle.js"></script>
+
 </html>

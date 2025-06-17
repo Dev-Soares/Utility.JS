@@ -1,4 +1,4 @@
-import { Tarefa } from './classTarefa';
+import { Tarefa } from './classes';
 import { createElement, appendChild } from 'react';
 
 
@@ -14,8 +14,6 @@ export function criaItem(){
     const item = document.createElement('li')
     mostraTarefa.appendChild(item)
     const tarefa = new Tarefa(nomeTarefa, false);
-    const listaTarefa = []
-    listaTarefa.push(tarefa)
     item.innerHTML = tarefa.nome;
     document.querySelector('.tarefa').value = ''
     return item; 

@@ -67,7 +67,7 @@ body {
   outline: 1px solid var(--primary-color);
 }
 
-.btn-tarefa {
+.btn-envio {
   border: none;
   color: var(--white-color);
   font-size: 18px;

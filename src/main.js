@@ -1,9 +1,11 @@
 
 import './assets/css/style.css';
-import { criaBotoes, criaItem } from './modules/createEl';
+import { criaBotoes, criaItem } from './modules/createElTask'
+import { criaGasto } from './modules/createTable'
 
+// TASKLIST:
 
-const btnTarefa = document.querySelector('.btn-tarefa');
+const btnTarefa = document.querySelector('#btn-tarefa');
 
 btnTarefa.addEventListener('click', (e) => {
     const item = criaItem();
@@ -29,5 +31,19 @@ lista.addEventListener("click", (event) => {
     const item = event.target.closest("li")
     item.classList.add('checado');
   }
+});
+
+// MONITORADOR DE GASTOS:
+
+const btnGastos = document.querySelector('#btn-gastos');
+
+btnGastos.addEventListener('click', (e)=>{
+  criaGasto();
+
+})
+document.querySelector('').addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        criaGasto();
+    };
 });
 
