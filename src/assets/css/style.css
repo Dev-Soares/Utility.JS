@@ -390,6 +390,26 @@ body {
     padding: 0.6rem;
     font-size: 0.6rem;
   }
+  .menu nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100vw;
+    display: block;
+  }
+  .menu ul {
+    flex-wrap: nowrap;
+    display: flex;
+    width: max-content;
+  }
+   .menu ul li {
+    display: inline-block;
+  }
+  .menu ul li a {
+    min-width: 120px; 
+    display: inline-block;
+    text-align: center;
+  }
+}
 
   .menu h1 {
     font-size: 1rem;
