@@ -476,6 +476,42 @@ body {
   }
 
   @media screen and (max-width: 480px) {
+    .menu {
+    width: 100%;
+    position: static;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .menu-content {
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .menu h1 {
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+  }
+  .menu nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .menu nav ul li {
+    width: 100%;
+    margin: 0.2rem 0;
+  }
+  .menu nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--light-gray-color);
+  }
   .texto-intro h1 {
     font-size: 2rem;
   }
