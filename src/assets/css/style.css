@@ -422,6 +422,7 @@ body {
   .tools-container h2 {
     font-size: 2rem!important;
     line-height: 2.2rem;
+    letter-spacing: 3px;
   }
 
   .container {
