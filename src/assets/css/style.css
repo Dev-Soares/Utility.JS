@@ -384,24 +384,30 @@ body {
   align-items: center;
   justify-content: center;
 }
+.menu-toggle {
+  display: none;
+}
 
 @media screen and (max-width: 768px){
   .menu ul li a {
     padding: 0.6rem;
     font-size: 0.6rem;
-    display: block;
   }
-  .menu a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+  .menu-toggle {
+    display: flex;
+  }
   .menu nav {
-    overflow: hidden;
-    position: relative;
-
+    display: none;
+  }
+  .menu nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    z-index: 1000;
   }
 
   .menu h1 {
