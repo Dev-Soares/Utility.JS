@@ -61,7 +61,7 @@ body {
 .menu ul li a {
   display: block;
   padding: 2rem;
-  color: var(--primary-color);
+  color: var(--primary-color-darker);
   font-size: 1.2rem;
   position: relative;
   text-decoration: none;
@@ -70,7 +70,7 @@ body {
 
 .menu h1 {
   font-size: 1.7rem;
-  color: var(--primary-color);
+  color: var(--primary-color-darker);
   padding: 2rem;
   font-family: var(--title-font);
 }
@@ -95,14 +95,15 @@ body {
   left: 25%;
 }
 .secao-padrao{
-    min-height: 1000px;
+    min-height: 1100px;
     background-position: static;
     background-size: cover;
     background-image: url(./img/bg1.png);
+    padding: 200px 0 80px 0;
 }
 
 .texto-intro{
-    height: 700px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +111,6 @@ body {
 }
 
 .texto-intro h1 {
-  margin-top: 200px;
     font-size: 5rem;
     font-family: var(--title-font);
     color: var(--white-color);
@@ -118,6 +118,7 @@ body {
     font-weight: 800;
     width: 29ch;
 }
+
 .texto-intro p {
     font-size: 2rem;
     font-family: var(--text-font);
@@ -143,10 +144,11 @@ body {
     flex-direction: column;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.29);;
 }
-.card h2{
+
+.card h2, .tools-container h2 {
     font-size: 2rem;
     font-family: var(--title-font);
-    font-weight: 800;
+    font-weight: 400;
     align-self: center;
     color: white;
 }
@@ -167,7 +169,7 @@ body {
 }
 
 .botao-padrao{
-  padding: 0;
+  padding: auto;
   border: none;
   background: linear-gradient(90deg, rgb(3, 110, 3), rgb(6, 81, 6));
   color: var(--white-color);
@@ -194,6 +196,160 @@ body {
   box-shadow: 0 10px 20px rgb(20, 67, 26, 0.5);
   transform: translateY(-1px);
 }
+
+.tools-container {
+  max-width: 1000px;
+  margin: auto;
+  background: var(--container-color);
+  padding: 30px;
+  border-radius: 10px;
+  color: var(--white-color);
+  display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.29);;
+} 
+.tools-container p {
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: var(--text-font);
+  color: var(--white-color);
+  margin-bottom: 40px;
+  align-self: center;
+  padding: auto;
+}
+
+.tools-container h2 {
+  font-size: 4rem!important;
+}
+
+ .container-envio * {
+  display: block;
+  width: 70%;
+  margin-bottom: 10px;
+  margin: auto;
+}
+.container-envio label {
+  font-size: 24px;
+  color: var(--white-color);
+  font-family: var(--text-font);
+  font-weight: 400;
+  margin-bottom: 10px ;
+}
+
+.container-tabela{
+  min-height: 200px;
+  margin-top: 40px!important;
+}
+
+.container-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: none;
+  color: var(--white-color);
+  font-family: var(--text-font);
+}
+
+.container-tabela th, .container-tabela td {
+  margin: 20px 0 0 0 !important;
+  padding: 10px;
+  text-align: center;
+  border: var(--white-color) 2px solid;
+  font-size: 1.6rem;
+}
+
+.input-padrao {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+  font-family: var(--text-font);
+  font-weight: 400;
+}
+
+.btn-tarefa:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+.btn-envio {
+  border: none;
+  color: var(--white-color);
+  font-size: 36px;
+  font-weight: 400;
+  height: 60px;
+  cursor: pointer;
+  margin-top: 40px;
+  background: linear-gradient(90deg, rgb(3, 110, 3), rgb(6, 81, 6));
+  box-shadow: 0 4px 15px rgb(20, 67, 26);
+  transition: box-shadow 0.3 ease, transform 0.3 ease;
+  border-radius: 50px;
+  align-self: center;
+  margin-bottom: auto;
+}
+
+.btn-tarefa:hover {
+   background: linear-gradient(90deg, rgb(41, 186, 41), rgb(17, 133, 17));
+  box-shadow: 0 4px 15px rgb(16, 54, 21);
+  transform: translateY(-1px);
+}
+.checked-button,
+.delete-button {
+  height: 40px;
+  margin: 10px;
+  margin-top: 20px;
+  color: var(--white-color);
+  border: none;
+  width: auto;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: var(--text-fonts);
+  font-weight: 700;
+  border-radius: 50px;
+}
+
+.checked-button {
+  background: linear-gradient(90deg, rgb(32, 155, 32), rgb(15, 120, 15));
+  box-shadow: 0 4px 15px rgb(20, 67, 26);
+  transition: box-shadow 0.3 ease, transform 0.3 ease;
+  margin-left: 40px; 
+  padding: 0 15px 0 15px;
+  font-family: var(--text-font);
+  font-weight: 400;
+}
+.checked-button:hover{
+   background: linear-gradient(90deg, rgb(41, 186, 41), rgb(17, 133, 17));
+  box-shadow: 0 4px 15px rgb(16, 54, 21);
+  transform: translateY(-1px);
+
+}
+
+.delete-button {
+  background: linear-gradient(90deg,  rgb(151, 24, 24), rgb(91, 12, 12));
+  box-shadow: 0px 4px 15px rgb(85, 28, 28);
+  padding: 0 15px 0 15px;
+  font-family: var(--text-font);
+  font-weight: 400;
+}
+
+.delete-button:hover {
+  background: linear-gradient(90deg, rgb(173, 30, 30), rgb(120, 16, 16));
+  box-shadow: 0 4px 15px rgb(74, 24, 24);
+  transform: translateY(-1px);
+}
+
+.checado {
+  color: rgba(17, 244, 47, 0.63) !important;
+  text-decoration: line-through !important;
+}
+.tools-container li {
+  font-size: 30px;
+  color: #ffffff;
+  padding: 20px;
+  align-items: baseline;
+  max-width: 560px;
+  font-family: var(--text-fonts);
+}
+
+
+
 
 .footer-page {
   background-color: var(--white-color);
@@ -227,4 +383,100 @@ body {
   display:flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px){
+  .menu ul li a {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .menu h1 {
+    font-size: 1.5rem;
+  }
+
+  .texto-intro h1 {
+    font-size: 3rem;
+    width: auto;
+  }
+
+  .texto-intro p {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+
+  .card {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 1.8rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .tools-container h2 {
+    font-size: 2.5rem!important;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 95%;
+    max-width: 400px;
+    margin: 20px 0;
+    padding: 15px;
+  }
+  .tools-container {
+    width: 95%;
+    padding: 15px;
+  }
+  .container-envio * {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .container-tabela table {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 480px) {
+  .texto-intro h1 {
+    font-size: 2rem;
+  }
+  .texto-intro p {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  .menu h1 {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  .menu ul li a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+.container-tabela {
+    overflow-x: auto;
+  }
+  .container-tabela table {
+    min-width: 500px;
+  }
+  .botao-padrao,
+  .btn-envio {
+    width: 100%;
+    font-size: 1.1rem;
+    height: 45px;
+  }
+  .input-padrao {
+    font-size: 1rem;
+    height: 40px;
+    padding: 0 10px;
+  }
 }

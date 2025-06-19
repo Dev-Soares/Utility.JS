@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
     <title>Monitorador de Gastos</title>
 </head>
 
 <body>
     <aside class="menu">
         <div class="menu-content">
-            <h1>Nome do site</h1>
+            <h1>UtilityJS</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Apresentação do Projeto</a></li>
@@ -24,17 +24,18 @@
         <div class="tools-container">
             <h2>Monitorador de Gastos</h2>
             <p>Para poder monitorar da forma correta, Insira abaixo a Descrição do gasto, a data e o valor </p>
-            <label for="desc-gasto">Descrição:</label>
-            <input type="text" class="input-padrao desc-gasto" maxlength="30"><br>
-            <label for="data-gasto">Data:</label>
-            <input type="date" class="input-padrao data-gasto"><br>
-            <label for="valor-gasto">Valor:</label>
-            <input type="text" class="input-padrao valor-gasto"><br>
-            <button class="botao-padrao" id="btn-gastos">Enviar</button>
+            <div class="container-envio">
+                <label for="desc-gasto">Descrição:</label>
+                <input type="text" class="input-padrao desc-gasto" maxlength="40" placeholder="Ex: Encher o tanque de gasolina"><br>
+                <label for="data-gasto">Data:</label>
+                <input type="date" class="input-padrao data-gasto" placeholder="Ex: 01/01/2001"><br>
+                <label for="valor-gasto">Valor:</label>
+                <input type="text" class="input-padrao valor-gasto" placeholder="Ex: R$20,00"><br>
+                <button class="botao-padrao" id="btn-gastos">Enviar</button>
+            </div>
         </div>
-        </div>
-        <div class="container">
-            <h1>Tabela de Gastos</h1>
+        <div class="tools-container container-tabela">
+            <h2>Tabela de Gastos</h2>
             <table class="tabela-final">
                 <thead>
                     <tr>
@@ -49,23 +50,23 @@
         </div>
     </section>
     <footer class="footer-page">
-    <div class="footer-content">
-      <nav>
-        <ul>
-          <div class="footer-links">
-            <li><a target="_blank"
-                href="https://www.linkedin.com/in/bernardo-soares-150096364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
-                  src="../src/assets/css/img/linkedin.png" alt="icone linkedin"></a></li>
-            <li><a target="_blank" href="https://github.com/Dev-Soares"><img src="../src/assets/css/img/github icon.png"
-                  alt="icone github"></a></li>
-            <li><a target="_blank" href="https://www.instagram.com/__soaresbernardo/"><img
-                  src="../src/assets/css/img/instagram.png" alt="icone instagram"></a></li>
-          </div>
-        </ul>
-      </nav>
-    </div>
-  </footer>
- <script src="./assets/js/bundle.js"></script>
+        <div class="footer-content">
+            <nav>
+                <ul>
+                    <div class="footer-links">
+                        <li><a target="_blank"
+                                href="https://www.linkedin.com/in/bernardo-soares-150096364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                                    src="../src/assets/css/img/linkedin.png" alt="icone linkedin"></a></li>
+                        <li><a target="_blank" href="https://github.com/Dev-Soares"><img
+                                    src="../src/assets/css/img/github icon.png" alt="icone github"></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/__soaresbernardo/"><img
+                                    src="../src/assets/css/img/instagram.png" alt="icone instagram"></a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="./assets/js/bundle.js"></script>
 </body>
 
 </html>

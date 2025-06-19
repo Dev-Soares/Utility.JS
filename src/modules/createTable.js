@@ -8,7 +8,7 @@ export function criaGasto(){
     const dataGasto = document.querySelector('.data-gasto').value
     const valorGasto = document.querySelector('.valor-gasto').value
     
-    if(descGasto === '' || dataGasto === '' || valorGasto === '' || typeof(valorGasto) !== 'number'){
+    if(descGasto === '' || dataGasto === '' || valorGasto === ''){
         window.alert('Preencha todos os campos, por favor')
         return
     }

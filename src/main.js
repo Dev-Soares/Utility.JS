@@ -15,7 +15,7 @@ import { criaGasto } from './modules/createTable'
     criaBotoes(item);
   })
 
-  document.querySelector('.tarefa').addEventListener('keypress', (event) => {
+  document.querySelector('#tarefa').addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
       const item = criaItem();
       criaBotoes(item);
@@ -59,7 +59,13 @@ import { criaGasto } from './modules/createTable'
   });
 }
 
-  window.addEventListener("DOMContentLoaded", (event) => {
-    iniciarTasklist();
-    iniciarMonitoradorGastos();
+window.addEventListener("DOMContentLoaded", (event) => {
+    const path = window.location.pathname;
+    if (path.endsWith('Monitorador.html')){
+      iniciarMonitoradorGastos();
+
+    }
+    if (path.endsWith('Lista.html')) {
+      iniciarTasklist();
+    }
 });

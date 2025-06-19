@@ -5,7 +5,7 @@ import { createElement, appendChild } from 'react';
 
 
 export function criaItem(){
-    const nomeTarefa = document.querySelector('.tarefa').value;
+    const nomeTarefa = document.querySelector('#tarefa').value;
     if(nomeTarefa === ''){
         window.alert('Digite algo válido, por favor')
         return
@@ -15,17 +15,17 @@ export function criaItem(){
     mostraTarefa.appendChild(item)
     const tarefa = new Tarefa(nomeTarefa, false);
     item.innerHTML = tarefa.nome;
-    document.querySelector('.tarefa').value = ''
+    document.querySelector('#tarefa').value = ''
     return item; 
 }
 
 export function criaBotoes(item){
     const btnCheck = document.createElement('button');
     btnCheck.classList.add('checked-button');
-    btnCheck.innerHTML = 'OK';
+    btnCheck.innerHTML = 'Feita';
     const btnDelete = document.createElement('button');
     btnDelete.classList.add('delete-button');
-    btnDelete.innerHTML = 'X';
+    btnDelete.innerHTML = 'Deletar';
     item.appendChild(btnCheck);
     item.appendChild(btnDelete);
 }
