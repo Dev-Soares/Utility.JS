@@ -2,55 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Monitorador de Gastos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Monitorador de Gastos</title>
 </head>
 
 <body>
-  <aside class="menu">
-    <div class="menu-content">
-      <h1>Nome do site</h1>
-      <nav>
-        <ul>
-          <li><a href="./index.html">Apresentação do Projeto</a></li>
-          <li><a href="ListaHTML.html">TaskList</a></li>
-          <li><a href="#">Monitorador de Gastos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
-  <section class="lista-section">
-    <div class="container container-form-gasto">
-      <div>
-        <h1>Monitorador de Gastos</h1>
-        <p>Para poder monitorar da forma correta, Insira abaixo a Descrição do gasto, a data e o valor </p>
-        <label for="desc-gasto">Descrição:</label>
-        <input type="text" class="desc-gasto"><br>
-        <label for="data-gasto">Data:</label>
-        <input type="date" class="data-gasto"><br>
-        <label for="valor-gasto">Valor:</label>
-        <input type="text" class="valor-gasto"><br>
-        <button class="btn-envio" id="btn-gastos">Enviar</button>
-      </div>
-    </div>
-    <div class="container">
-      <h1>Tabela de Gastos</h1>
-      <table class="tabela-final">
-        <thead>
-          <tr>
-            <th>Descrição</th>
-            <th>Data</th>
-            <th>Valor</th>
-          </tr>
-        </thead>
-        <tbody class="corpo-gastos"></tbody>
-      </table>
-    </div>
-
-  </section>
-  <footer class="footer-page">
+    <aside class="menu">
+        <div class="menu-content">
+            <h1>Nome do site</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Apresentação do Projeto</a></li>
+                    <li><a href="Lista.html">TaskList</a></li>
+                    <li><a href="Monitorador.html">Monitorador de Gastos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <section class="secao-padrao">
+        <div class="tools-container">
+            <h2>Monitorador de Gastos</h2>
+            <p>Para poder monitorar da forma correta, Insira abaixo a Descrição do gasto, a data e o valor </p>
+            <label for="desc-gasto">Descrição:</label>
+            <input type="text" class="input-padrao desc-gasto" maxlength="30"><br>
+            <label for="data-gasto">Data:</label>
+            <input type="date" class="input-padrao data-gasto"><br>
+            <label for="valor-gasto">Valor:</label>
+            <input type="text" class="input-padrao valor-gasto"><br>
+            <button class="botao-padrao" id="btn-gastos">Enviar</button>
+        </div>
+        </div>
+        <div class="container">
+            <h1>Tabela de Gastos</h1>
+            <table class="tabela-final">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Data</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody class="corpo-gastos"></tbody>
+            </table>
+        </div>
+        </div>
+    </section>
+    <footer class="footer-page">
     <div class="footer-content">
       <nav>
         <ul>
@@ -67,9 +65,7 @@
       </nav>
     </div>
   </footer>
-  
+ <script src="./assets/js/bundle.js"></script>
 </body>
-<script src="./assets/js/bundle.js"></script>
-
 
 </html>
