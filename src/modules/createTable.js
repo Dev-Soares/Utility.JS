@@ -1,28 +1,42 @@
-import { createElement } from "react";
+
 import { Gasto } from "./classes";
-import { create } from "core-js/core/object";
 
 
-export default function criaGasto(){
-    const descGasto = document.querySelector('.desc-gasto')
-    const dataGasto = document.querySelector('.data-gasto')
-    const valorGasto = document.querySelector('.valor-gasto')
-    const gasto = new Gasto (descGasto,dataGasto,valorGasto);
-    createTr()
-    for (i in gasto){
-        createTd(gasto[i]);
+
+export function criaGasto(){
+    const descGasto = document.querySelector('.desc-gasto').value
+    const dataGasto = document.querySelector('.data-gasto').value
+    const valorGasto = document.querySelector('.valor-gasto').value
+    
+    if(descGasto === '' || dataGasto === '' || valorGasto === '' || typeof(valorGasto) !== 'number'){
+        window.alert('Preencha todos os campos, por favor')
+        return
     }
+
+    const gasto = new Gasto (descGasto,dataGasto,valorGasto);
+    const tr = createTr();
+
+    for (let i in gasto){
+        tr.appendChild(createTd(gasto[i]));
+    }
+    
+    document.querySelector('.desc-gasto').value = ''
+    document.querySelector('.data-gasto').value = ''
+     document.querySelector('.valor-gasto').value = ''
+    
 } 
 
- const createTd = (valor) => {
-    const td = createElement('td')
-    td.innerhtml = valor
+let createTd = (valor) => {
+    const td = document.createElement('td');
+    td.textContent = valor
+    return td;
  }
 
 
- const createTr = () => {
-    const tabelaPrincipal = document.querySelector('tabela-final')
-    const tr = document.createElement('tr')
-    tabelaPrincipal.appendChild(tr)
+let createTr = () => {
+    const tabelaPrincipal = document.querySelector('.corpo-gastos');
+    const tr = document.createElement('tr');
+    tabelaPrincipal.appendChild(tr);
+    return tr;
  }
  

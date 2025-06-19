@@ -22,14 +22,14 @@
     </div>
   </aside>
   <section class="lista-section">
-    <div class="container">
+    <div class="container container-form-gasto">
       <div>
         <h1>Monitorador de Gastos</h1>
         <p>Para poder monitorar da forma correta, Insira abaixo a Descrição do gasto, a data e o valor </p>
         <label for="desc-gasto">Descrição:</label>
         <input type="text" class="desc-gasto"><br>
         <label for="data-gasto">Data:</label>
-        <input type="text" class="data-gasto"><br>
+        <input type="date" class="data-gasto"><br>
         <label for="valor-gasto">Valor:</label>
         <input type="text" class="valor-gasto"><br>
         <button class="btn-envio" id="btn-gastos">Enviar</button>
@@ -38,11 +38,14 @@
     <div class="container">
       <h1>Tabela de Gastos</h1>
       <table class="tabela-final">
-        <tr>
-          <th>Descrição</th>
-          <th>Data</th>
-          <th>Valor</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Data</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody class="corpo-gastos"></tbody>
       </table>
     </div>
 
@@ -64,7 +67,9 @@
       </nav>
     </div>
   </footer>
+  
 </body>
 <script src="./assets/js/bundle.js"></script>
+
 
 </html>

@@ -5,45 +5,61 @@ import { criaGasto } from './modules/createTable'
 
 // TASKLIST:
 
-const btnTarefa = document.querySelector('#btn-tarefa');
+  const iniciarTasklist = () => {
 
-btnTarefa.addEventListener('click', (e) => {
+  const btnTarefa = document.querySelector('#btn-tarefa');
+
+  btnTarefa.addEventListener('click', (e) => {
+    e.preventDefault();
     const item = criaItem();
     criaBotoes(item);
-})
+  })
 
-document.querySelector('.tarefa').addEventListener('keypress', (event) => {
+  document.querySelector('.tarefa').addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-        const item = criaItem();
-        criaBotoes(item);
+      const item = criaItem();
+      criaBotoes(item);
     };
-});
+  });
 
-const lista = document.querySelector(".lista-tarefas");
+  const lista = document.querySelector(".lista-tarefas");
 
-lista.addEventListener("click", (event) => {
-  if (event.target.classList.contains("delete-button")) {
-    const item = event.target.closest("li");
-    item.remove();
-  }
+  lista.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete-button")) {
+      const item = event.target.closest("li");
+      item.remove();
+    }
 
-  if (event.target.classList.contains("checked-button")) {
-    const item = event.target.closest("li")
-    item.classList.add('checado');
-  }
-});
+    if (event.target.classList.contains("checked-button")) {
+      const item = event.target.closest("li")
+      item.classList.add('checado');
+    }
+  });
+}
 
-// MONITORADOR DE GASTOS:
 
-const btnGastos = document.querySelector('#btn-gastos');
+  // MONITORADOR DE GASTOS:
 
-btnGastos.addEventListener('click', (e)=>{
-  criaGasto();
+  const iniciarMonitoradorGastos = () => {
 
-})
-document.querySelector('').addEventListener('keypress', (event) => {
+  const btnGastos = document.querySelector('#btn-gastos');
+
+  btnGastos.addEventListener('click', (e) => {
+    console.log('clicou');
+    e.preventDefault();
+    criaGasto();
+  })
+
+  const containerFormGasto = document.querySelector('.container-form-gasto')
+  containerFormGasto.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-        criaGasto();
+      console.log('clicou');
+      criaGasto();
     };
-});
+  });
+}
 
+  window.addEventListener("DOMContentLoaded", (event) => {
+    iniciarTasklist();
+    iniciarMonitoradorGastos();
+});
