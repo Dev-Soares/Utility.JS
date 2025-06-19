@@ -384,38 +384,46 @@ body {
   align-items: center;
   justify-content: center;
 }
-.menu-toggle {
-  display: none;
-}
 
 @media screen and (max-width: 768px){
-  .menu ul li a {
-    padding: 0.6rem;
-    font-size: 0.6rem;
+  .menu {
+    width: 100%;
+    position: static;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
-  .menu-toggle {
-    display: flex;
+  .menu-content {
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
   }
-  .menu nav {
-    display: none;
-  }
-  .menu nav.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100vw;
-    background: #fff;
-    z-index: 1000;
-  }
-
   .menu h1 {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
   }
   .menu nav ul {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
+  .menu nav ul li {
+    width: 100%;
+    margin: 0.2rem 0;
+  }
+  .menu nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--light-gray-color);
+  }
+}
+
   .texto-intro h1 {
     font-size: 3rem;
     width: auto;
@@ -443,7 +451,7 @@ body {
   .tools-container h2 {
     font-size: 2rem!important;
     line-height: 2.2rem;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
 
   .container {
